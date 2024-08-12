@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JavaScript Webpage</title>
+    <script>
+        // This script runs when the webpage is loaded
+        function displayMessage() {
+            // Display a phrase on the webpage
+            document.getElementById("message").innerText = "Welcome to my first JavaScript webpage!";
+
+            // Display a phrase on the console
+            console.log("Hello, world! This is displayed in the console.");
+        }
+    </script>
+</head>
+<body onload="displayMessage()">
+    <h1 id="message">Loading...</h1>
+</body>
+</html>
