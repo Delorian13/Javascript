@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loop and Array</title>
+</head>
+<body>
+
+    <h1>JavaScript Loop and Array Example</h1>
+
+    <h2>Counting from 0 to 10 and Checking Even/Odd:</h2>
+    <div id="evenOdd"></div>
+
+    <h2>Counting Until myNum:</h2>
+    <div id="countToMyNum"></div>
+
+    <h2>Subjects Array:</h2>
+    <div id="subjectsArray"></div>
+
+    <h2>Subjects Separated by Commas:</h2>
+    <div id="subjectsComma"></div>
+
+    <script>
+        // Task 1: For loop from 0 to 10, checking even or odd
+        let evenOddDiv = document.getElementById("evenOdd");
+        for (let i = 0; i <= 10; i++) {
+            if (i % 2 === 0) {
+                evenOddDiv.innerHTML += `Count ${i} is even<br>`;
+            } else {
+                evenOddDiv.innerHTML += `Count ${i} is odd<br>`;
+            }
+        }
+
+        // Task 2: Do While loop with user input
+        let myNum = prompt("Please enter a number between 5 and 20:");
+        myNum = parseInt(myNum);
+        let counter = 1;
+        let countToMyNumDiv = document.getElementById("countToMyNum");
+
+        do {
+            countToMyNumDiv.innerHTML += `Counter is: ${counter}<br>`;
+            counter++;
+        } while (counter <= myNum);
+
+        // Task 3: Array of subjects and display using foreach()
+        let subjects = ["Accounting", "Algebra", "Programming", "Art", "Data Analytics"];
+        let subjectsArrayDiv = document.getElementById("subjectsArray");
+
+        subjects.forEach(subject => {
+            subjectsArrayDiv.innerHTML += `${subject}<br>`;
+        });
+
+        // Task 4: Display array values separated by commas
+        let subjectsCommaDiv = document.getElementById("subjectsComma");
+        subjectsCommaDiv.innerHTML = subjects.join(", ");
+    </script>
+
+</body>
+</html>
